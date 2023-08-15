@@ -433,6 +433,7 @@ footer {
     /* Make gallery items stack in a single column */
     .artwork-item {
         flex: 0 0 calc(100% - 20px);
+        margin: 0 auto;
     }
 
     /* Center-align gallery title and description */
