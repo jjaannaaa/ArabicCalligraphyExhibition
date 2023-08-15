@@ -1,0 +1,448 @@
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide scrollbars during loading */
+}
+
+/* Other styles above */
+
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Match your website's background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-icon {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #ffc107; /* Match your website's accent color */
+    border-top: 4px solid #333;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff; /* Match your website's text color */
+}
+
+/* Other styles below */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content {
+    display: none; /* Hide content during loading */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    background-image: url('header-bg.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s; /* Add color transition for section titles */
+}
+
+/* Gallery Styles */
+.section-title:hover {
+    color: #ffc107; /* Change color on hover */
+}
+
+.section {
+    opacity: 0.9;
+    transition: opacity 0.5s;
+}
+
+.section:hover {
+    opacity: 1;
+}
+
+
+#about {
+    background-color: #fff;
+    padding: 40px;
+    transition: 1s;
+}
+
+#about h2.section-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#about p.section-description {
+    text-align: center;
+    color: #777;
+    margin: 0 auto 30px;
+    max-width: 600px;
+}
+
+.personal-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.personal-card img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.personal-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Adjust text color to match the theme */
+}
+
+.personal-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+.social-media-buttons {
+    margin-top: 20px;
+}
+
+.social-media-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333; /* Adjust color to match the theme */
+    transition: color 0.3s;
+}
+
+.social-media-buttons a:hover {
+    color: #ffc107; /* Adjust hover color to match the theme */
+}
+
+.social-media-buttons img {
+    width: 30px;
+    height: auto;
+}
+
+/* Other styles above */
+
+/* ... Existing styles ... */
+
+#gallery {
+    text-align: center; /* Center-align the title and description */
+    background-color: #f9f9f9;
+    padding: 40px;
+    transition: 1s;
+}
+
+#gallery h2.section-title {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#gallery p.section-description {
+    color: #777;
+    margin: 10px auto 30px;
+    max-width: 600px;
+}
+
+.artwork {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Other styles above */
+
+/* ... Existing styles ... */
+
+.artwork-item {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 calc(33.33% - 20px);
+    text-align: center;
+    border-radius: 15px;
+
+    /* Center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.artwork-item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.artwork-item video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.artwork-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.play-button:hover {
+    opacity: 0.8;
+}
+
+.artwork-item img ,
+.artwork-item video{
+max-width: 100%;
+    height: auto;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 90vh; /* Adjust this value as needed */
+    overflow: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1; /* Ensure the close button is above the modal content */
+}
+
+.modal-content-inner img,
+.modal-content-inner video {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh; /* Adjust this value to control the size */
+}
+
+
+
+#contact {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.address {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.visitors-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.visitors-section h3 {
+    font-size: 24px;
+    color: #333; /* Match your website's text color */
+    margin-bottom: 10px;
+}
+
+.visitors-section p {
+    font-size: 18px;
+    color: #666; /* Match your website's secondary text color */
+}
+
+
+.contact-details {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social-media-buttons {
+    margin-top: 20px;
+}
+
+.social-media-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-media-buttons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-buttons a:hover {
+    transform: scale(1.1);
+}
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+/* Other styles above */
+
+/* ... Existing styles ... */
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    header {
+        padding: 10px 0; /* Reduce header padding for smaller screens */
+    }
+
+    .section-title {
+        font-size: 20px; /* Decrease section title font size for smaller screens */
+    }
+
+    /* Adjust personal card styling for better mobile layout */
+    .personal-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .personal-card img {
+        max-width: 60px;
+    }
+
+    .personal-card h3 {
+        font-size: 18px;
+    }
+
+    .personal-card p {
+        font-size: 12px;
+    }
+
+    /* Make gallery items stack in a single column */
+    .artwork-item {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    /* Center-align gallery title and description */
+    #gallery h2.section-title,
+    #gallery p.section-description {
+        text-align: center;
+        margin: 10px auto; /* Center-align and adjust margins */
+    }
+}
+
+/* ... Existing styles ... */
+
+
