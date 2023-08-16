@@ -14,7 +14,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333; /* Match your website's background color */
+    background-color: #5a537b; /* Match your website's background color */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +25,8 @@ body {
 .loading-icon {
     width: 50px;
     height: 50px;
-    border: 4px solid #ffc107; /* Match your website's accent color */
-    border-top: 4px solid #333;
+    border: 4px solid #869ec2; /* Match your website's accent color */
+    border-top: 4px solid #5a537b;
     border-radius: 50%;
     animation: spin 2s linear infinite;
 }
@@ -58,8 +58,8 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: 'Tajawal', Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background:#b2a4c1;
+    color: #5a537b;
 }
 
 .container {
@@ -70,12 +70,11 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: #5a537b;
     color: #fff;
     padding: 20px 0;
     text-align: center;
     position: relative;
-    background-image: url('header-bg.jpg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
 }
@@ -101,21 +100,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffc107;
+    color: #869ec2;
 }
 
 /* Section Styles */
 .section-title {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #5a537b;
     text-align: center;
     transition: color 0.3s; /* Add color transition for section titles */
 }
 
 /* Gallery Styles */
 .section-title:hover {
-    color: #ffc107; /* Change color on hover */
+    color: #869ec2; /* Change color on hover */
 }
 
 .section {
@@ -194,10 +193,6 @@ nav ul li a:hover {
     height: auto;
 }
 
-/* Other styles above */
-
-/* ... Existing styles ... */
-
 #gallery {
     text-align: center; /* Center-align the title and description */
     background-color: #f9f9f9;
@@ -216,6 +211,14 @@ nav ul li a:hover {
     max-width: 600px;
 }
 
+/* Add a class for showing individual items */
+.show-item {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 2;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
 .artwork {
     display: flex;
     flex-wrap: wrap;
@@ -223,10 +226,30 @@ nav ul li a:hover {
     gap: 20px;
     margin-top: 20px;
 }
+/* Add overlay with shadowy color to gallery items */
+.artwork-item {
+    /* ... Other styles ... */
+    position: relative; /* Position for overlay */
+}
 
-/* Other styles above */
+/* Add overlay with shadowy color */
+.artwork-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Shadowy color */
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 0.3s; /* Transition for opacity change */
+}
 
-/* ... Existing styles ... */
+/* Apply hover effect to remove overlay on hover */
+.artwork-item:hover::before {
+    opacity: 0; /* Remove overlay on hover */
+}
+
 
 .artwork-item {
     box-sizing: border-box;
@@ -246,15 +269,19 @@ nav ul li a:hover {
     align-items: center;
 }
 
+
 .artwork-item img{
     max-width: 100%;
     max-height: 100%;
+    border-radius: 8px;
+
 }
 
 .artwork-item video {
     width: 100%;
     height: auto;
     transition: transform 0.3s;
+    border-radius: 8px;
 }
 
 .artwork-item:hover {
@@ -342,7 +369,7 @@ max-width: 100%;
 }
 
 footer {
-    background-color: #333;
+    background-color: #5a537b;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -442,7 +469,34 @@ footer {
         text-align: center;
         margin: 10px auto; /* Center-align and adjust margins */
     }
+    /* Add overlay with shadowy color to gallery items on larger screens */
+
+    .artwork-item {
+        /* ... Other styles ... */
+        position: relative; /* Position for overlay */
+    }
+
+    /* Add overlay with shadowy color */
+    .artwork-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Shadowy color */
+        opacity: 1; /* Initially fully visible */
+        transition: opacity 0.5s; /* Transition for opacity change */
+    }
+
+    /* Apply hover effect to remove overlay on hover */
+    .artwork-item:hover::before {
+        opacity: 0; /* Remove overlay on hover */
+    }
+
 }
+
+
 
 /* ... Existing styles ... */
 
